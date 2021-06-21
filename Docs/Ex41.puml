@@ -1,0 +1,30 @@
+@startuml
+
+class ex41Sol{
+Object NameSorter
+
+}
+ex41Sol->NameSorter
+class NameSorter{
+.. Method - Reading Names from File..
+-public static List<Name> readNames(String file) throws FileNotFoundException
+.. Method - Write Names to Output File..
++ public void printNames(List<Name> names, File filename)
+
+}
+NameSorter<|--Name
+class Name{
+-Field: String firstName
+#Field: String lastName
+-public Name(String lastName, String firstName)
+..Getter Methods..
+#public String getFirstName()
++public String getLastName()
+..Setter Methods..
+-public void setFirstName()
+#public void setLastName()
+..Compare To and To Strings..
+-public int compareTo(Name otherLast)
++public String toString()
+}
+@enduml@enduml

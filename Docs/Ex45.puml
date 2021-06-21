@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class ex45Sol{
+Object SortEmployeeInfo
+-List<EmployeesInfo>
+
+}
+ex42Sol<|--Replace
+class Replace{
+.. Method - Reading Employees from Input File..
++readFile(String file) throws FileNotFoundException: String
+.. Method - Write names onto output file..
++write(String phrase, String filename) throws IOException: void
+
+}
+
+@enduml

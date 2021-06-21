@@ -1,0 +1,32 @@
+@startuml
+
+class ex42Sol{
+Object SortEmployeeInfo
+List<EmployeesInfo>
+
+}
+ex42Sol<|--SortEmployeeInfo
+class SortEmployeeInfo{
+.. Method - Reading Employees from Input File..
++ readEInfo(String file) throws FileNotFoundException: List<EmployeesInfo>
+.. Method - Print Name and Salary to Console
++ printEInfo(List<EmployeesInfo> employeesInfos): void
+
+}
+SortEmployeeInfo<|--EmployeesInfo
+
+class EmployeesInfo{
+.. Constructor..
+EmployeesInfo(String lastName, String firstName, String salary)
+..Getter Methods..
++getFirstName():String
++getLastName():String
++getSalary():String
+..Setter Methods..
++setLastName(String lastName): void
++setFirstName(String firstName): void
++setSalary(String salary): void
+..Compare To and To Strings..
++toString(): String
+}
+@enduml

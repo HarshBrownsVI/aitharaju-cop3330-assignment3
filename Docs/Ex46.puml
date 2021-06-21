@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/class-diagram
+class ex46Sol{
+.. Local Variables..
+Object WordFrequency
+-name: String
+-map: HashMap
+}
+ex46Sol<|== WordFrequency
+class WordFrequency{
+.. Global Variables ..
+#!$LinkedHashMap <String, Integer> freq : public
+#!$String word: public
+.. Method - Read the text file and count the number of each word present in that text file..
++count(String file) throws FileNotFoundException : LinkedHashMap <String, Integer>
+}
+
+@enduml
